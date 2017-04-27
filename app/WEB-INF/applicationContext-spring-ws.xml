@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://jax-ws.dev.java.net/spring/core"
+ 	xmlns:wss="http://jax-ws.dev.java.net/spring/servlet"
+ 		xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+
+			http://jax-ws.dev.java.net/spring/core
+			http://jax-ws.dev.java.net/spring/core.xsd
+			http://jax-ws.dev.java.net/spring/servlet
+			http://jax-ws.dev.java.net/spring/servlet.xsd">
+
+	<bean id="servicePort" class="com.bonc.codeCenter.ws.service.SB_MDM_MDM_InquiryEnterpriseInfoSrvPortImpl" scope="prototype">
+		<property name="localCCService" ref="localCCService"></property>
+	</bean>
+ <wss:binding url="/SB_MDM_MDM_InquiryEnterpriseInfoSrvPort">
+  <wss:service>
+   <ws:service bean="#servicePort" /> <!--注入实现类-->
+  </wss:service>
+ </wss:binding>
+
+</beans>

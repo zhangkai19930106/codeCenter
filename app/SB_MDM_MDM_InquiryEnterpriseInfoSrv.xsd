@@ -1,0 +1,82 @@
+<schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified"
+	targetNamespace="http://mss.unicom.com/SB_MDM_MDM_InquiryEnterpriseInfoSrv"
+        xmlns:po="http://mss.unicom.com/SB_MDM_MDM_InquiryEnterpriseInfoSrv"
+        xmlns:msg="http://soa.mss.unicom.com/MsgHeader"
+	xmlns="http://www.w3.org/2001/XMLSchema">
+        <import namespace="http://soa.mss.unicom.com/MsgHeader"
+           schemaLocation="MsgHeader.xsd"/>
+	<element name="SB_MDM_MDM_InquiryEnterpriseInfoSrvRequest" type="po:SB_MDM_MDM_InquiryEnterpriseInfoSrvRequest"/>	
+	<element name="SB_MDM_MDM_InquiryEnterpriseInfoSrvResponse" type="po:SB_MDM_MDM_InquiryEnterpriseInfoSrvResponse"/>
+		<complexType name="SB_MDM_MDM_InquiryEnterpriseInfoSrvRequest">
+			<sequence>
+                                <element name="MsgHeader" type="msg:MsgHeader" nillable="true"/>                              
+                                <element name="VENDOR_NAME" type="string" nillable="true"/>
+                                <element name="ORG_CODE" type="string" nillable="true"/>
+                                <element name="ENROLL_CODE" type="string" nillable="true"/>
+                                <element name="SEARCH_FLAG" type="string" nillable="true"/>
+                                <element name="V_RESERVED_1" type="string" nillable="true"/>
+                                <element name="V_RESERVED_2" type="string" nillable="true"/>
+                                <element name="V_RESERVED_3" type="string" nillable="true"/>
+                                <element name="V_RESERVED_4" type="string" nillable="true"/>
+                                <element name="V_RESERVED_5" type="string" nillable="true"/>
+			</sequence>
+		</complexType>
+		
+		<complexType  name="SB_MDM_MDM_InquiryEnterpriseInfoSrvResponse">
+			<sequence>
+				<element name="SERVICE_FLAG" type="string" nillable="true"/>
+				<element name="SERVICE_MESSAGE" type="string" nillable="true"/>
+				<element name="INSTANCE_ID" type="decimal" nillable="true"/>
+				<element name="TOTAL_RECORD" type="decimal" nillable="true"/>
+				<element name="TOTAL_PAGE" type="decimal" nillable="true"/>
+				<element name="PAGE_SIZE" type="decimal" nillable="true"/>
+				<element name="CURRENT_PAGE" type="decimal" nillable="true"/>
+				<element name="SB_MDM_MDM_InquiryEnterpriseInfoSrvOutputCollection" type="po:SB_MDM_MDM_InquiryEnterpriseInfoSrvOutputCollection"/>
+			</sequence>
+		</complexType>        
+        <complexType name="SB_MDM_MDM_InquiryEnterpriseInfoSrvOutputCollection">
+            <sequence>
+                    <element name="SB_MDM_MDM_InquiryEnterpriseInfoSrvOutputItem" type="po:SB_MDM_MDM_InquiryEnterpriseInfoSrvOutputItem" maxOccurs="unbounded" minOccurs="0"/>
+            </sequence>
+        </complexType>    
+        <complexType name="SB_MDM_MDM_InquiryEnterpriseInfoSrvOutputItem">
+            <sequence>
+               <element name="ORG_CODE" type="string" nillable="true"/>
+                <element name="VENDOR_NAME" type="string" nillable="true"/>
+                <element name="ENROLL_CODE" type="string" nillable="true"/>
+                <element name="LEGAL_REPRESENTATIVE" type="string" nillable="true"/>
+                <element name="ORGCODE_START_DATE" type="dateTime" nillable="true"/>
+                <element name="ORGCODE_END_DATE" type="dateTime" nillable="true"/>
+                <element name="ORG_TYPE" type="string" nillable="true"/>
+                <element name="EE_COUNT" type="decimal" nillable="true"/>
+                <element name="ENROLL_FUND" type="decimal" nillable="true"/>
+                <element name="CURRENCY_TYPE" type="string" nillable="true"/>
+                <element name="BUSS_SCOPE" type="string" nillable="true"/>
+                <element name="ENROLL_DATE" type="dateTime" nillable="true"/>
+                <element name="BUSS_TYPE" type="string" nillable="true"/>
+                <element name="BUSS_TRADE" type="string" nillable="true"/>
+                <element name="ADDRESS" type="string" nillable="true"/>
+                <element name="QUS_FLAG" type="string" nillable="true"/>
+                <element name="REGION" type="string" nillable="true"/>
+                <element name="PROVINCE_CODE" type="string" nillable="true"/>
+                <element name="CITY_NAME" type="string" nillable="true"/>
+                <element name="TELEHPONE" type="string" nillable="true"/>
+                <element name="ADMIN_ORG" type="string" nillable="true"/>
+                <element name="ADMIN_ORG_CODE" type="string" nillable="true"/>
+                <element name="PRIVATE_FLAG" type="decimal" nillable="true"/>
+                <element name="CACHE_FLAG" type="decimal" nillable="true"/>
+                <element name="LAST_UPDATE_DATE" type="dateTime" nillable="true"/>
+                <element name="RESERVED_1" type="string" nillable="true"/>
+                <element name="RESERVED_2" type="string" nillable="true"/>
+                <element name="RESERVED_3" type="string" nillable="true"/>
+                <element name="RESERVED_4" type="string" nillable="true"/>
+                <element name="RESERVED_5" type="string" nillable="true"/>
+                <element name="RESERVED_6" type="string" nillable="true"/>
+                <element name="RESERVED_7" type="string" nillable="true"/>
+                <element name="RESERVED_8" type="string" nillable="true"/>
+                <element name="RESERVED_9" type="string" nillable="true"/>
+                <element name="RESERVED_10" type="string" nillable="true"/>
+            </sequence>
+        </complexType>
+</schema>

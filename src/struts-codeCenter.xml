@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="EIS" namespace="/EIS" extends="pure-default">
+		<action name="*.*" class="com.bonc.codeCenter.action.{1}.{2}Action">
+			<result name="success">/WEB-INF/pages/{1}/{2}.jsp</result>
+			<result name="*">/WEB-INF/pages/{1}/{2}-{3}.jsp</result>
+		</action>
+	</package>
+</struts>

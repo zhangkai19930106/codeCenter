@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://client.ws.bonc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://webservice.bonc.com/" name="CodeCenterWSImplService" targetNamespace="http://client.ws.bonc.com/">
+  <wsdl:import location="http://132.35.195.32:8099/codeCenter/codeCenter?wsdl=CodeCenterWS.wsdl" namespace="http://webservice.bonc.com/">
+    </wsdl:import>
+  <wsdl:binding name="CodeCenterWSImplServiceSoapBinding" type="ns1:CodeCenterWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CCService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="CCService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CCServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CodeCenterWSImplService">
+    <wsdl:port binding="tns:CodeCenterWSImplServiceSoapBinding" name="CodeCenterWSImplPort">
+      <soap:address location="http://132.35.195.32:8099/codeCenter/codeCenter"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

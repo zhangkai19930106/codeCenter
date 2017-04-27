@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<schema targetNamespace="http://soa.mss.unicom.com/MsgHeader" 
+xmlns:tns="http://soa.mss.unicom.com/MsgHeader" 
+elementFormDefault="qualified" 
+attributeFormDefault="qualified" 
+xmlns="http://www.w3.org/2001/XMLSchema">
+
+<complexType name="MsgHeader">
+    <sequence>
+        <element name="SOURCE_SYSTEM_ID" type="string" nillable="true"/>
+ 	<element name="SOURCE_SYSTEM_NAME" type="string" nillable="true"/>
+ 	<element name="USER_ID" type="string" nillable="true"/>
+ 	<element name="USER_NAME" type="string" nillable="true"/>
+ 	<element name="SUBMIT_DATE" type="dateTime" nillable="true"/>
+        <element name="PAGE_SIZE" type="decimal" nillable="true"/>
+        <element name="CURRENT_PAGE" type="decimal" nillable="true"/>
+        <element name="TOTAL_RECORD" type="decimal" nillable="true"/>
+        <element name="PROVINCE_CODE" type="string" nillable="true"/>
+        <element name="ENVIRONMENT_NAME" type="string" nillable="true"/>
+    </sequence>
+</complexType>
+</schema>
